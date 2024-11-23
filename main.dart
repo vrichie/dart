@@ -87,11 +87,17 @@ void main() {
     }
   }
   */
+  /*
   printName();
   String name = getName();
   int age = getAge();
   // printAll(name, age);
   printAll2(name: name, age: age);
+  final stuff = printStuff();
+  print(stuff.name);
+  print(stuff.age);*/
+
+  //classes
 }
 
 //functions
@@ -109,10 +115,13 @@ int getAge() {
   return 13;
 }
 
-void printAll(String name, int age) {
-  print('My name is $name, my age is $age');
-}
+void printAll(String name, int age) =>
+    print('My name is $name, my age is $age');
 
 void printAll2({required String name, int? age}) {
   print('My name is $name, my age is $age');
+}
+
+({int age, String name}) printStuff() {
+  return (age: 21, name: "joe");
 }
